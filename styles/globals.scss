@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  height: calc(100svh - 100px);
+  overflow: scroll;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+ol,
+ul {
+  padding: revert;
+  padding-left: 1em;
+}
+ul {
+  list-style-type: disc;
+  li {
+    ul {
+      list-style-type: circle;
+    }
+  }
+}
+
+.news-detail {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .owl {
+    > * + * {
+      margin-top: 1.25rem;
+    }
+    pre {
+      margin-top: 35px;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 2.5rem;
+  }
+  > hr {
+    margin-top: 5px;
+  }
+  section {
+    background: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  p {
+    white-space: pre-wrap;
+  }
+  blockquote {
+    border-radius: 3px;
+    border: 1px solid rgba(135, 131, 120, 0.15);
+    background-color: transparent;
+    padding: 16px 16px 16px 12px;
+    background: #fff;
+  }
+
+  p > code {
+    font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono",
+      Courier, monospace;
+    line-height: normal;
+    background: rgba(135, 131, 120, 0.15);
+    color: #eb5757;
+    border-radius: 3px;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+  }
+  .tag {
+    background: rgba(135, 131, 120, 0.25);
+    border-radius: 4px;
+    color: inherit;
+    padding: 0px 10px;
+  }
+}
+
+.ant-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .anticon {
+    font-size: 20px;
+    color: blue;
+  }
+}
+
+.anticon-left,
+.anticon-right {
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+  th,
+  td {
+    border: 1px solid #999;
+    padding: 15px 20px;
+    font-weight: 500;
+    text-align:  left;
+  }
+
+  th {
+    // background: #ddd;
+  }
+
+  // @media only screen and (max-width: 768px) {
+  //   border-bottom: 1px solid #999;
+
+  //   td,
+  //   th {
+  //     display: block;
+  //     width: 100% !important;
+  //     padding: 10px 15px;
+  //     border-bottom: none;
+  //   }
+  // }
+}
+// コードブロックのスタイル
+$languageMap: (
+  "abap": "ABAP",
+  "agda": "Agda",
+  "arduino": "Arduino",
+  "assembly": "Assembly",
+  "bash": "Bash",
+  "basic": "BASIC",
+  "bnf": "BNF",
+  "c": "C",
+  "clojure": "Clojure",
+  "coffeescript": "CoffeeScript",
+  "coq": "Coq",
+  "css": "CSS",
+  "dart": "Dart",
+  "dhall": "Dhall",
+  "diff": "Diff",
+  "docker": "Docker",
+  "ebnf": "EBNF",
+  "elixir": "Elixir",
+  "elm": "Elm",
+  "erlang": "Erlang",
+  "f": "F",
+  "flow": "Flow",
+  "fortran": "Fortran",
+  "gherkin": "Gherkin",
+  "glsl": "GLSL",
+  "go": "Go",
+  "graphql": "GraphQL",
+  "groovy": "Groovy",
+  "haskell": "Haskell",
+  "html": "HTML",
+  "idris": "Idris",
+  "java": "Java",
+  "javascript": "JavaScript",
+  "json": "JSON",
+  "julia": "Julia",
+  "kotlin": "Kotlin",
+  "latex": "LaTeX",
+  "less": "Less",
+  "lisp": "Lisp",
+  "livescript": "LiveScript",
+  "llvm": "LLVM IR",
+  "lua": "Lua",
+  "makefile": "Makefile",
+  "markdown": "Markdown",
+  "markup": "Markup",
+  "matlab": "MATLAB",
+  "mathematica": "Mathematica",
+  "mermaid": "Mermaid",
+  "nix": "Nix",
+  "objective-c": "Objective-C",
+  "ocaml": "OCaml",
+  "pascal": "Pascal",
+  "perl": "Perl",
+  "php": "PHP",
+  "text": "Plain Text",
+  "powershell": "PowerShell",
+  "prolog": "Prolog",
+  "protobuf": "Protobuf",
+  "purescript": "PureScript",
+  "python": "Python",
+  "r": "R",
+  "racket": "Racket",
+  "reason": "Reason",
+  "ruby": "Ruby",
+  "rust": "Rust",
+  "sass": "Sass",
+  "scala": "Scala",
+  "scheme": "Scheme",
+  "scss": "Scss",
+  "shell": "Shell",
+  "solidity": "Solidity",
+  "sql": "SQL",
+  "swift": "Swift",
+  "toml": "TOML",
+  "typescript": "TypeScript",
+  "vb": "VB.Net",
+  "verilog": "Verilog",
+  "vhdl": "VHDL",
+  "visual": "Visual Basic",
+  "webassembly": "WebAssembly",
+  "xml": "XML",
+  "yaml": "YAML",
+);
+pre {
+  position: relative;
+  > div {
+    border-radius: 10px 0 10px 10px;
+  }
+
+  code {
+    &::before {
+      content: "";
+      padding: 5px 20px;
+      position: absolute;
+      top: 1px;
+      right: 0;
+      transform: translateY(-100%);
+      background: inherit;
+      background: #1e1e1e;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  @each $language, $name in $languageMap {
+    code.language-#{$language}::before {
+      content: "#{$name}";
+    }
+  }
+}
+
+// Notionかreactmarkdownが付与しているクラス
+.contains-task-list {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+}
